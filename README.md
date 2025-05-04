@@ -1,4 +1,4 @@
-# **yansujix**
+# **鹽酥雞X**
 
 Personal notes of my Arch Linux experience
 
