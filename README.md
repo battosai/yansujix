@@ -29,6 +29,7 @@ Personal notes of my Arch Linux experience
   - other packages: ```pacstrap -K /mnt vim base-devel sof-firmware grub efibootmgr intel-ucode networkmanager iwd```
   - [NetworkManager needs to be configured to use iwd for wireless](https://wiki.archlinux.org/title/NetworkManager#Using_iwd_as_the_Wi-Fi_backend)
 - fstab that shit (also do it for the other hdd, it all goes to /mnt/etc/fstab
-  - can also do the other hdd post-installation, you just manually modify the /etc/fstab file
   - ```genfstab /mnt > /mnt/etc/fstab``` to move the fstab file into our disk
-- to be continued... follow the reference videos :)
+  - can also do the other hdd post-installation, you just manually modify the /etc/fstab file
+- chroot into the installed system ```arch-chroot /mnt```
+- to be continued... follow the reference videos and official guide :)
