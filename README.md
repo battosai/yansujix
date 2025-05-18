@@ -32,4 +32,6 @@ Personal notes of my Arch Linux experience
   - ```genfstab /mnt > /mnt/etc/fstab``` to move the fstab file into our disk
   - can also do the other hdd post-installation, you just manually modify the /etc/fstab file
 - chroot into the installed system ```arch-chroot /mnt```
+- When installing the bootloader (grub), I used the cmd from the first reference video
+  - ```grub-install --efi-directory=/boot```
 - to be continued... follow the reference videos and official guide :)
