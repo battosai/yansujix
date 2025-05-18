@@ -20,7 +20,7 @@ Personal notes of my Arch Linux experience
   - ```ping archlinux.org``` to test the connection
 - Update system clock ```timedatectl set-timezone America/New_York```
 - Wipe drives with random data: ```dd if=/dev/urandom of=<device_name> bs=4096 status=progress```
-- Partition your drives with "cfdisk <drive_name>"
+- Partition your drives with "cfdisk /dev/<drive_name>"
    - ssd: 1G for /boot, 4G for swap, the rest for "/" which is /home (?)
    - separate hdd as a single partition that I'll use for storage
 - Format the partitions (ssd & hdd)
