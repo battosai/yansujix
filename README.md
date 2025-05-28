@@ -63,3 +63,6 @@ Personal notes of my Arch Linux experience
 - Setting up git ```sudo pacman -S git```
   - Install openssh in order to use ssh-keygen for ssh keys in git
   - ```sudo pacman -S openssh```
+  - Once you have created a ssh-key (private and public), add it to not have to enter the passwd every time
+    - ```eval $(ssh-agent)``` to start the ssh-agent
+    - ```ssh-add <path_to_private_key>```
