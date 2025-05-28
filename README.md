@@ -56,6 +56,7 @@ Personal notes of my Arch Linux experience
   - In hyprland config, update monitor section to be ```monitor = eDP-1, 1920x1080@60, 0x0, 1```
 - Install an app launcher ```sudo pacman -S rofi-wayland```
   - In hyprland config, update program used for ```$menu = rofi -show drun```
+- Install brightnessctl ```sudo pacman -S brightnessctl``` to control brightness
 
 ## General Setup
 - To see Chinese/Japanese/Korean characters, install noto-fonts ```sudo pacman -S noto-fonts noto-fonts-cjk```
