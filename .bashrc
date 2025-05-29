@@ -10,33 +10,35 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # ===========================
-# Bash
+# Start SSH agent on boot
 # ===========================
-bashrc=~/.bashrc
-bash_profile=~/.bash_profile
-
-# ===========================
-# SSH 
-# ===========================
-ssh_conf=~/.ssh/config
-
-# Starts an agent on bootup
 if [ -z "$SSH_AUTH_SOCK" ]; then
 	eval "$(ssh-agent -s)"
 fi
 
 # ===========================
-# Hyprland
+# Yansujix
 # ===========================
+bashrc=~/.bashrc
+bash_profile=~/.bash_profile
+ssh_conf=~/.ssh/config
 hyprland_conf=~/.config/hypr/hyprland.conf
 kitty_conf=~/.config/kitty/kitty.conf
+
+yansujix_repo=~/Documents/GitHub/yansujix
+
+alias edit_bashrc="vim $bashrc && source $bashrc"
 alias edit_hyprland="vim $hyprland_conf"
 alias edit_kitty="vim $kitty_conf"
 
-# ===========================
-# Yansujix
-# ===========================
-yansujix_repo=~/Documents/GitHub/yansujix
+function change_kitty_theme()
+{
+	# Download the specified theme and make a symlink
+	# Reference: https://github.com/dexpota/kitty-themes
+	THEME=https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/$1.conf
+	wget "$THEME" -P ~/.config/kitty/kitty-themes/themes
+	ln -s ~/.config/kitty/kitty-themes/themes/$1.conf ~/.config/kitty/theme.conf
+}
 
 function upload_confs() 
 {
@@ -47,7 +49,6 @@ function upload_confs()
 	cp $ssh_conf $yansujix_repo/ssh_config
 	cp $kitty_conf $yansujix_repo/kitty.conf
 	cp $hyprland_conf $yansujix_repo/hyprland.conf
-	cp 
 	git add .
 
 	if [ $# -eq 0 ]; then
