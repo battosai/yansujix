@@ -22,12 +22,14 @@ fi
 bashrc=~/.bashrc
 bash_profile=~/.bash_profile
 ssh_conf=~/.ssh/config
+vimrc=~/.vimrc
 hyprland_conf=~/.config/hypr/hyprland.conf
 kitty_conf=~/.config/kitty/kitty.conf
 
 yansujix_repo=~/Documents/GitHub/yansujix
 
 alias edit_bashrc="vim $bashrc && source $bashrc"
+alias edit_vimrc="vim $vimrc"
 alias edit_hyprland="vim $hyprland_conf"
 alias edit_kitty="vim $kitty_conf"
 
@@ -47,6 +49,7 @@ function upload_confs()
 	cp $bashrc $yansujix_repo/.bashrc
 	cp $bash_profile $yansujix_repo/.bash_profile
 	cp $ssh_conf $yansujix_repo/ssh_config
+	cp $vimrc $yansujix_repo/.vimrc
 	cp $kitty_conf $yansujix_repo/kitty.conf
 	cp $hyprland_conf $yansujix_repo/hyprland.conf
 	git add .
