@@ -14,11 +14,15 @@ set nobackup
 " Line & column numbers
 " ===========================
 set number
-set ruler
+
+" Highlights the character that goes over the 80char max
+highlight ColorColumn ctermbg=white
+call matchadd('ColorColumn', '\%81v', 80)
 
 " ===========================
 " Indentation
 " ===========================
+set expandtab
 set tabstop=4
 set softtabstop=4
 set autoindent
