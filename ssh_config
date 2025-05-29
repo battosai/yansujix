@@ -1,0 +1,3 @@
+HOST *
+	IdentityFile ~/.ssh/battosai_git
+	AddKeysToAgent yes
