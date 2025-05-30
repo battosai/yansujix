@@ -16,7 +16,7 @@ set nobackup
 set number
 
 " Highlights the character that goes over the 80char max
-highlight ColorColumn ctermbg=white
+highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 80)
 
 " ===========================

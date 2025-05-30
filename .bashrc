@@ -19,19 +19,19 @@ fi
 # ===========================
 # Yansujix
 # ===========================
-bashrc=~/.bashrc
-bash_profile=~/.bash_profile
-ssh_conf=~/.ssh/config
-vimrc=~/.vimrc
-hyprland_conf=~/.config/hypr/hyprland.conf
-kitty_conf=~/.config/kitty/kitty.conf
+dot_bashrc=~/.bashrc
+dot_bash_profile=~/.bash_profile
+dot_ssh=~/.ssh/config
+dot_vimrc=~/.vimrc
+dot_hyprland=~/.config/hypr/hyprland.conf
+dot_kitty=~/.config/kitty/kitty.conf
 
-yansujix_repo=~/Documents/GitHub/yansujix
+yansujix=~/Documents/GitHub/yansujix
 
-alias edit_bashrc="vim $bashrc && source $bashrc"
-alias edit_vimrc="vim $vimrc"
-alias edit_hyprland="vim $hyprland_conf"
-alias edit_kitty="vim $kitty_conf"
+alias bashrc="vim $dot_bashrc && source $dot_bashrc"
+alias vimrc="vim $dot_vimrc"
+alias edit_hyprland="vim $dot_hyprland"
+alias edit_kitty="vim $dot_kitty"
 
 function change_kitty_theme()
 {
@@ -42,16 +42,16 @@ function change_kitty_theme()
 	ln -s ~/.config/kitty/kitty-themes/themes/$1.conf ~/.config/kitty/theme.conf
 }
 
-function upload_confs() 
+function upload_dots() 
 {
-	cd $yansujix_repo
+	cd $yansujix
 	git fetch && git pull
-	cp $bashrc $yansujix_repo/.bashrc
-	cp $bash_profile $yansujix_repo/.bash_profile
-	cp $ssh_conf $yansujix_repo/ssh_config
-	cp $vimrc $yansujix_repo/.vimrc
-	cp $kitty_conf $yansujix_repo/kitty.conf
-	cp $hyprland_conf $yansujix_repo/hyprland.conf
+	cp $dot_bashrc $yansujix/.bashrc
+	cp $dot_bash_profile $yansujix/.bash_profile
+	cp $dot_ssh $yansujix/ssh_config
+	cp $dot_vimrc $yansujix/.vimrc
+	cp $dot_kitty $yansujix/kitty.conf
+	cp $dot_hyprland $yansujix/hyprland.conf
 	git add .
 
 	if [ $# -eq 0 ]; then
