@@ -3,6 +3,8 @@
 " ===========================
 syntax on
 filetype on
+set ruler
+set laststatus=2
 
 " ===========================
 " No extra copy files
@@ -14,6 +16,8 @@ set nobackup
 " Line & column numbers
 " ===========================
 set number
+" set cursorline
+" set cursorcolumn
 
 " Highlights the character that goes over the 80char max
 highlight ColorColumn ctermbg=magenta
@@ -31,5 +35,5 @@ set shiftwidth=4
 " ===========================
 " Search & match
 " ===========================
-set hlsearch
-set showmatch
+" set hlsearch
+" set showmatch
