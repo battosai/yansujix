@@ -3,8 +3,12 @@
 " ===========================
 syntax on
 filetype on
+set showmode
 set ruler
+set showmatch
+set history=1000
 set laststatus=2
+highlight StatusLine ctermfg=096 ctermbg=221
 
 " ===========================
 " No extra copy files
@@ -13,15 +17,16 @@ set noswapfile
 set nobackup
 
 " ===========================
-" Line & column numbers
+" Lines & columns
 " ===========================
 set number
 " set cursorline
 " set cursorcolumn
 
+set colorcolumn=80
+highlight ColorColumn ctermfg=208 ctermbg=096
 " Highlights the character that goes over the 80char max
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 80)
+" call matchadd('ColorColumn', '\%81v', 80)
 
 " ===========================
 " Indentation
@@ -33,7 +38,17 @@ set autoindent
 set shiftwidth=4
 
 " ===========================
-" Search & match
+" Visual mode
 " ===========================
-" set hlsearch
-" set showmatch
+highlight Visual ctermfg=221 ctermbg=096
+
+" ===========================
+" Search
+" ===========================
+" set hlsearch 
+" highlight Search ctermfg=216 ctermbg=054
+
+" ===========================
+" Markers
+" ===========================
+highlight Folded ctermfg=221 ctermbg=096
