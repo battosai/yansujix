@@ -7,26 +7,21 @@ set showmode
 set ruler
 set showmatch
 set history=1000
-set laststatus=2
-highlight StatusLine ctermfg=096 ctermbg=221
-
-" ===========================
-" No extra copy files
-" ===========================
 set noswapfile
 set nobackup
+
+highlight Visual cterm=bold ctermfg=none ctermbg=238
+highlight ErrorMsg cterm=bold ctermfg=196 ctermbg=235
+highlight Folded cterm=bold ctermfg=255 ctermbg=238
 
 " ===========================
 " Lines & columns
 " ===========================
+highlight LineNr cterm=none ctermfg=239
 set number
-" set cursorline
-" set cursorcolumn
 
+highlight ColorColumn cterm=none ctermbg=235
 set colorcolumn=80
-highlight ColorColumn ctermfg=208 ctermbg=096
-" Highlights the character that goes over the 80char max
-" call matchadd('ColorColumn', '\%81v', 80)
 
 " ===========================
 " Indentation
@@ -38,17 +33,37 @@ set autoindent
 set shiftwidth=4
 
 " ===========================
-" Visual mode
-" ===========================
-highlight Visual ctermfg=221 ctermbg=096
-
-" ===========================
 " Search
 " ===========================
 " set hlsearch 
 " highlight Search ctermfg=216 ctermbg=054
 
 " ===========================
-" Markers
+" Statusline 
 " ===========================
-highlight Folded ctermfg=221 ctermbg=096
+set laststatus=2
+set statusline=
+
+highlight GitBranch cterm=bold ctermfg=223 ctermbg=203
+set statusline+=%#GitBranch#
+set statusline+=\ %{b:git_branch}\ 
+
+highlight FileName cterm=bold ctermfg=234 ctermbg=216
+set statusline+=%#FileName#
+set statusline+=\ %f\ 
+
+highlight StatusLine cterm=bold ctermfg=245 ctermbg=235
+set statusline+=%#StatusLine#
+set statusline+=\ %m\ %r\ 
+
+" ===========================
+" Statusline functions
+" ===========================o
+function! GitBranch()
+    return trim(system("git -C " . expand("%:h") . " branch --show-current 2>/dev/null"))
+endfunction
+
+augroup GetGitBranch
+    autocmd!
+    autocmd BufEnter * let b:git_branch = GitBranch()
+augroup END

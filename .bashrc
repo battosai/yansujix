@@ -42,6 +42,7 @@ function upload_dots()
     cp $css_waybar $yansujix/waybar/style.css
 	cp $dot_kitty $yansujix/kitty/kitty.conf
     cp $dot_rofi $yansujix/rofi/config.rasi
+    cp $dot_git $yansujix/.gitconfig
 	git add .
 
 	if [ $# -eq 0 ]; then
