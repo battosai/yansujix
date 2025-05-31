@@ -44,7 +44,7 @@ set shiftwidth=4
 set laststatus=2
 set statusline=
 
-highlight GitBranch cterm=bold ctermfg=223 ctermbg=203
+highlight GitBranch cterm=bold ctermfg=223 ctermbg=209
 set statusline+=%#GitBranch#
 set statusline+=\ %{b:git_branch}\ 
 
