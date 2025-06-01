@@ -47,8 +47,8 @@ set statusline=
 
 highlight BrightOrange cterm=bold ctermfg=234 ctermbg=216
 set statusline+=%#BrightOrange#
-set statusline+=\ [%{b:git_branch}][%f]\ 
-
+set statusline+=\ %{b:git_branch}%f\ 
+    
 highlight Orange cterm=bold ctermfg=234 ctermbg=209
 set statusline+=%#Orange#
 set statusline+=%{(mode()=='n')?'\ NORMAL\ ':''}
@@ -77,9 +77,13 @@ set statusline+=\ [%l\/%L]:%c\
 
 " ===========================
 " Statusline functions
-" ===========================o
+" ===========================
 function! GitBranch()
-    return trim(system("git -C " . expand("%:h") . " branch --show-current 2>/dev/null"))
+    let branch = trim(system("git -C " . expand("%:h") . " branch --show-current 2>/dev/null"))
+    if !empty(branch)
+        let branch = ("[ " . branch . "] ")
+    endif
+    return branch
 endfunction
 
 augroup GetGitBranch

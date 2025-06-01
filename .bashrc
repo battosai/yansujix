@@ -75,9 +75,9 @@ alias hyprland_config="vim $dot_hyprland"
 dot_waybar=~/.config/waybar/config.jsonc
 css_waybar=~/.config/waybar/style.css
 
-alias waybar_config="vim $dot_waybar && $waybar_reload"
-alias waybar_style="vim $css_waybar && $waybar_reload"
-alias waybar_reload="killall waybar || true  && hyprctl dispatch exec waybar"
+alias waybar_config="vim $dot_waybar && waybar_reload"
+alias waybar_style="vim $css_waybar && waybar_reload"
+alias waybar_reload="killall waybar || true && hyprctl dispatch exec waybar"
 
 # ===========================
 # Kitty
