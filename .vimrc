@@ -47,7 +47,7 @@ set statusline=
 
 highlight BrightOrange cterm=bold ctermfg=234 ctermbg=216
 set statusline+=%#BrightOrange#
-set statusline+=\ %{b:git_branch}%f\ 
+set statusline+=\ %{b:git_branch}\ %f\ 
     
 highlight Orange cterm=bold ctermfg=234 ctermbg=209
 set statusline+=%#Orange#
@@ -68,6 +68,8 @@ set statusline+=%r\
 highlight Salmon cterm=bold ctermfg=234 ctermbg=132
 set statusline+=%#Salmon#
 set statusline+=\ %y
+highlight SalmonNormal cterm=none ctermfg=234 ctermbg=132
+set statusline+=%#SalmonNormal#
 set statusline+=[%{&fileencoding?&fileencoding:&encoding}]
 set statusline+=[%{&fileformat}]\ 
 
@@ -81,7 +83,7 @@ set statusline+=\ [%l\/%L]:%c\
 function! GitBranch()
     let branch = trim(system("git -C " . expand("%:h") . " branch --show-current 2>/dev/null"))
     if !empty(branch)
-        let branch = ("[ " . branch . "] ")
+        let branch = (" " . branch . " ")
     endif
     return branch
 endfunction
