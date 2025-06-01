@@ -8,6 +8,7 @@ set ruler
 set showmatch
 set history=1000
 set noswapfile
+set noshowmode
 set nobackup
 
 highlight Visual cterm=bold ctermfg=none ctermbg=238
@@ -48,22 +49,27 @@ highlight BrightOrange cterm=bold ctermfg=234 ctermbg=216
 set statusline+=%#BrightOrange#
 set statusline+=\ [%{b:git_branch}][%f]\ 
 
-highlight Orange cterm=none ctermfg=234 ctermbg=209
+highlight Orange cterm=bold ctermfg=234 ctermbg=209
 set statusline+=%#Orange#
-set statusline+=\ %m%y%r\ 
+set statusline+=%{(mode()=='n')?'\ NORMAL\ ':''}
+set statusline+=%{(mode()=='i')?'\ INSERT\ ':''}
+set statusline+=%{(mode()=='v')?'\ VISUAL\ ':''}
 
 highlight StatusLine cterm=none ctermfg=245 ctermbg=235
 set statusline+=%#StatusLine#
-set statusline+=\ %m\ 
+set statusline+=\ %m
+set statusline+=%=
+set statusline+=%r\ 
 
 highlight Salmon cterm=bold ctermfg=234 ctermbg=132
-set statusline+=%=
 set statusline+=%#Salmon#
-set statusline+=\ test\ 
+set statusline+=\ %y
+set statusline+=[%{&fileencoding?&fileencoding:&encoding}]
+set statusline+=[%{&fileformat}]\ 
 
 highlight Purple cterm=bold ctermfg=234 ctermbg=097
 set statusline+=%#Purple#
-set statusline+=\ test\ 
+set statusline+=\ [%l\/%L]:%c\ 
 
 " ===========================
 " Statusline functions
