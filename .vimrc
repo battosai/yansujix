@@ -3,13 +3,13 @@
 " ===========================
 syntax on
 filetype on
-set showmode
-set ruler
-set showmatch
 set history=1000
-set noswapfile
+set ruler
 set noshowmode
+set showmatch
+set noswapfile
 set nobackup
+set shortmess+=F
 
 highlight Visual cterm=bold ctermfg=none ctermbg=238
 highlight ErrorMsg cterm=bold ctermfg=196 ctermbg=235
@@ -54,6 +54,10 @@ set statusline+=%#Orange#
 set statusline+=%{(mode()=='n')?'\ NORMAL\ ':''}
 set statusline+=%{(mode()=='i')?'\ INSERT\ ':''}
 set statusline+=%{(mode()=='v')?'\ VISUAL\ ':''}
+set statusline+=%{(mode()=='V')?'\ VISUAL\ ':''}
+set statusline+=%{(mode()=='c')?'\ COMMAND\ ':''}
+set statusline+=%{(mode()=='R')?'\ REPLACE\ ':''}
+set statusline+=%{(mode()=='Rv')?'\ REPLACE\ ':''}
 
 highlight StatusLine cterm=none ctermfg=245 ctermbg=235
 set statusline+=%#StatusLine#
