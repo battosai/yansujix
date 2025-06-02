@@ -1,25 +1,27 @@
 @define-color orange_cream rgb(255, 189, 138);
 @define-color orange rgb(255, 110, 0);
-@define-color salmon rgb(148, 77, 96);
+@define-color salmon rgb(194, 85, 114);
 @define-color purple rgb(74, 35, 62);
 
 @define-color black_trans rgba(0, 0, 0, 0.2);
-@define-color dark_gray rgb(50, 50, 50);
+@define-color dark_gray rgb(100, 100, 100);
 
 *
 {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FiraCode, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "FiraCode Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
+    margin-bottom: 1px;
 }
 
 window#waybar 
 {
-    background-color: rgba(0, 0, 0, 0);
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #000000;
+    background-color: rgba(0, 0, 0, 0);
     transition-property: background-color;
     transition-duration: .5s;
+    border: 2px solid @purple;
+    border-radius: 10px 10px;
 }
 
 window#waybar.hidden 
@@ -69,22 +71,27 @@ button:hover {
     background-color: #a37800;
 }
 
-#workspaces button {
-    padding: 0 5px;
+#workspaces button 
+{
+    /*margin: 5px 0 0 0;*/
+    /*padding: 0 5px;*/
     background-color: transparent;
-    color: #ffffff;
+    color: @salmon;
 }
 
-#workspaces button:hover {
+#workspaces button:hover 
+{
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.focused {
+#workspaces button.focused 
+{
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#workspaces button.urgent {
+#workspaces button.urgent 
+{
     background-color: #eb4d4b;
 }
 
@@ -115,49 +122,60 @@ button:hover {
 }
 
 #window,
-#workspaces {
+#workspaces 
+{
     margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left > widget:first-child > #workspaces 
+{
     margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right > widget:last-child > #workspaces 
+{
     margin-right: 0;
 }
 
 #clock 
 {
-    color: @orange_cream
-    /*background-color: #64727D;*/
+    /*margin: 5px 0 0 0;*/
+    color: @salmon;
+    /*background-color: @black_trans;*/
+    /*border: 2px solid @salmon;*/
+    /*border-radius: 50px 50px;*/
+    /*border-bottom: 2px solid @salmon;*/
 }
 
 #battery 
 {
+    /*margin: 5px 0 0 0;*/
     color: @orange_cream;
-    /*background-color: #ffffff;*/
+    /*background-color: @black_trans;*/
 }
 
 #battery.charging, #battery.plugged 
 {
     color: #ff6e00;
-    /*background-color: #26A65B;*/
+    /*border-bottom: 2px solid @orange;*/
 }
 
-@keyframes blink {
-    to {
+@keyframes blink 
+{
+    to 
+    {
         background-color: #ffffff;
         color: #000000;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+#battery.critical:not(.charging) 
+{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 0, 68);
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -207,17 +225,14 @@ label:focus {
 
 #network
 {
-    margin: 5px 0 0 0;
+    /*margin: 5px 0 0 0;*/
     color: rgb(255, 255, 255);
-    background-color: @black_trans;
-    border: 2px solid @orange;
-    border-radius: 50px 50px;
+    /*background-color: @black_trans;*/
 }
 
 #network.disconnected 
 {
-
-    border: 2px solid @dark_gray;
+    color: @dark_gray;
 }
 
 #pulseaudio {
