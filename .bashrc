@@ -57,7 +57,7 @@ function upload_dots()
 function aur_install()
 {
     cd ~/Downloads
-    git clone $2
+    git clone https://aur.archlinux.org/$1.git
     cd $1
     makepkg -sirc
 }

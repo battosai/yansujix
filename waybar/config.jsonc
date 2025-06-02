@@ -17,9 +17,10 @@
     // ----------------------------------
     "modules-left": 
     [
-        "sway/mode",
-        "sway/scratchpad",
-        "custom/media"
+        // "sway/mode",
+        // "sway/scratchpad",
+        // "custom/media",
+        "mpd"
     ],
 
     "modules-center": 
@@ -30,7 +31,6 @@
 
     "modules-right": 
     [
-        // "mpd",
         // "idle_inhibitor",
         // "pulseaudio",
         // "power-profiles-daemon",

@@ -11,7 +11,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "FiraCode Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
 }
 
 window#waybar 
@@ -116,7 +116,8 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd {
+#mpd 
+{
     padding: 0 10px;
     color: #ffffff;
 }
