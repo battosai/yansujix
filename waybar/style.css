@@ -6,10 +6,10 @@
 @define-color black_trans rgba(0, 0, 0, 0.2);
 @define-color dark_gray rgb(50, 50, 50);
 
-tiles* 
+*
 {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FiraCode, FontAwesome, Roboto, Helvetica, sans-serif;
+    font-family: FiraCode, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
