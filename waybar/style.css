@@ -1,13 +1,21 @@
-* 
+@define-color orange_cream rgb(255, 189, 138);
+@define-color orange rgb(255, 110, 0);
+@define-color salmon rgb(148, 77, 96);
+@define-color purple rgb(74, 35, 62);
+
+@define-color black_trans rgba(0, 0, 0, 0.2);
+@define-color dark_gray rgb(50, 50, 50);
+
+tiles* 
 {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FiraCode, FontAwesome, Roboto, Helvetica, sans-serif;
     font-size: 13px;
 }
 
 window#waybar 
 {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0);
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #000000;
     transition-property: background-color;
@@ -123,19 +131,19 @@ button:hover {
 
 #clock 
 {
-    color: #ffbd8a
+    color: @orange_cream
     /*background-color: #64727D;*/
 }
 
 #battery 
 {
-    color: #ffbd8a;
+    color: @orange_cream;
     /*background-color: #ffffff;*/
 }
 
 #battery.charging, #battery.plugged 
 {
-    color: #ff801f;
+    color: #ff6e00;
     /*background-color: #26A65B;*/
 }
 
@@ -197,12 +205,19 @@ label:focus {
     background-color: #90b1b1;
 }
 
-#network {
-    background-color: #2980b9;
+#network
+{
+    margin: 5px 0 0 0;
+    color: rgb(255, 255, 255);
+    background-color: @black_trans;
+    border: 2px solid @orange;
+    border-radius: 50px 50px;
 }
 
-#network.disconnected {
-    background-color: #f53c3c;
+#network.disconnected 
+{
+
+    border: 2px solid @dark_gray;
 }
 
 #pulseaudio {

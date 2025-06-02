@@ -1,3 +1,5 @@
+" Colors https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+
 " ===========================
 " General Settings
 " ===========================
@@ -12,6 +14,7 @@ set nobackup
 set shortmess+=F
 
 highlight Visual cterm=bold ctermfg=none ctermbg=238
+highlight Error cterm=bold ctermfg=196 ctermbg=235
 highlight ErrorMsg cterm=bold ctermfg=196 ctermbg=235
 highlight Folded cterm=bold ctermfg=255 ctermbg=238
 

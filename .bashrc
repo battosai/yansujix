@@ -77,7 +77,7 @@ css_waybar=~/.config/waybar/style.css
 
 alias waybar_config="vim $dot_waybar && waybar_reload"
 alias waybar_style="vim $css_waybar && waybar_reload"
-alias waybar_reload="killall waybar || true && hyprctl dispatch exec waybar"
+alias waybar_reload="killall waybar 2>/dev/null || true && hyprctl dispatch exec waybar"
 
 # ===========================
 # Kitty
