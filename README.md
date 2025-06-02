@@ -57,9 +57,12 @@ Personal notes of my Arch Linux experience
 - Install an app launcher ```sudo pacman -S rofi-wayland```
   - In hyprland config, update program used for ```$menu = rofi -show drun```
 - Install brightnessctl ```sudo pacman -S brightnessctl``` to control brightness
+- Install sound ```sudo pacman -S pipewire && pipewire-audio``` and reboot
 
 ## General Setup
 - To see Chinese/Japanese/Korean characters, install noto-fonts ```sudo pacman -S noto-fonts noto-fonts-cjk```
+- To see Unicode characters, install a [Nerd-patched Font](https://www.nerdfonts.com/)
+  - Kitty has fonts patched innately so some characters may be visible there but nowhere else if an actual font is not installed
 - Setting up git ```sudo pacman -S git```
   - Install openssh in order to use ssh-keygen for ssh keys in git
   - ```sudo pacman -S openssh```
