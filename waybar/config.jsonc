@@ -56,6 +56,7 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{icon}",
+        "format-window-separator": "n",
         "format-icons": 
         {
             // "1": "",
@@ -225,14 +226,14 @@
     "wireplumber":
     {
         "format": "{volume}% {icon}",
-        "tooltip": false,
+        "format-muted": "{volume}% ",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": "{volume}% ",
-        "format-muted": "{volume}% ",
         "format-icons":
         {
             "default": ["", "", ""]
-        }
+        },
+        "tooltip": false
     },
 
     "custom/media": 
