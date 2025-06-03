@@ -167,16 +167,16 @@ button:hover
 {
     to 
     {
-        background-color: white;
-        color: #000000;
+        color: white;
+        border-bottom: 2px solid white;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) 
 {
-    background-color: transparent;
     color: @red;
+    background-color: transparent;
     border-bottom: 2px solid @red;
     animation-name: blink;
     animation-duration: 0.5s;
