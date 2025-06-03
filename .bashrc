@@ -51,7 +51,7 @@ function upload_dots()
 		git commit -m "$*"
 	fi
 
-	git push
+    git push
 }
 
 function aur_install()
