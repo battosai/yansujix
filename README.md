@@ -68,3 +68,11 @@ Personal notes of my Arch Linux experience
   - ```sudo pacman -S openssh```
   - Had to start an ssh-agent in .bashrc on boot (so that we don't have to manually start one)
   - Created an ssh config (```~/.ssh/config```) to add identity and key to agent
+- Screenshots ```sudo pacman -S grim slurp tee```
+  - ```grim``` is for general [screenshotting](https://man.archlinux.org/man/extra/grim/grim.1.en)
+  - ```slurp``` is for [region selection](https://man.archlinux.org/man/slurp.1)
+  - ```tee``` is for saving to standard [files](https://wiki.archlinux.org/title/Screen_capture)
+    - I'm unsure if this is installed by default, I didn't have to explicitly install it, but it might have been a dependency of something else
+    - Additionally, unsure if this is explicitly needed since you can specify a file path and name with just ```grim```
+- Image Viewing
+  - ```xdg-open <file-path>``` is installed by default and opens files in browsers
