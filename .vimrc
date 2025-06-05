@@ -17,6 +17,7 @@ highlight Visual cterm=bold ctermfg=none ctermbg=238
 highlight Error cterm=bold ctermfg=196 ctermbg=235
 highlight ErrorMsg cterm=bold ctermfg=196 ctermbg=235
 highlight Folded cterm=bold ctermfg=255 ctermbg=238
+highlight MatchParen cterm=bold ctermbg=235
 
 " ===========================
 " Lines & columns
