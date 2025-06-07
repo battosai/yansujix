@@ -53,6 +53,31 @@ window#waybar.chromium
     border: none;
 }
 
+#custom-separator
+{
+    color: @salmon;
+    margin: 10px 0 0 0;
+}
+
+menu 
+{
+	color: @orange_cream;
+	background: black;
+    border: 2px solid @salmon;
+	border-radius: 10px;
+}
+
+menuitem 
+{
+    background: transparent;
+    border-radius: 10px;
+}
+
+menuitem:hover
+{
+    color: white;
+}
+
 button 
 {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -74,13 +99,28 @@ button:hover
 #custom-power
 {
     color: @salmon;
-    margin: 0 0 0 10px;
-    border-bottom: 2px solid transparent;
+    border: 2px solid @salmon;
+    border-radius: 10px;
+    margin: 0 0 0 0;
+    padding: 0 2px 0 0;
 }
 
 #custom-power:hover
 {
-    border-bottom: 2px solid @salmon;
+    color: @red;
+    border-color: @red;
+}
+
+#custom-power menu
+{
+    color: @salmon;
+    border-radius: 0px;
+}
+
+#custom-power menu menuitem
+{
+    background-color: green;
+    color: blue;
 }
 
 /*
@@ -247,9 +287,13 @@ label:focus {
 
 #network
 {
-    /*margin: 5px 0 0 0;*/
     color: rgb(255, 255, 255);
-    /*background-color: @black_trans;*/
+    border-bottom: 2px solid transparent;
+}
+
+#network:hover
+{
+    border-bottom: 2px solid @salmon;
 }
 
 #network.disconnected 
@@ -260,12 +304,17 @@ label:focus {
 #wireplumber 
 {
     color: @orange_cream;
+    border-bottom: 2px solid transparent;
+}
+
+#wireplumber:hover
+{
+    border-bottom: 2px solid @salmon;
 }
 
 #wireplumber.muted 
 {
     color: @dark_gray;
-    border-bottom: 2px solid @salmon;
 }
 
 #custom-media {
