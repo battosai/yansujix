@@ -71,6 +71,26 @@ button:hover
     transition: none;
 }
 
+#custom-power
+{
+    color: @salmon;
+    margin: 0 0 0 10px;
+    border-bottom: 2px solid transparent;
+}
+
+#custom-power:hover
+{
+    border-bottom: 2px solid @salmon;
+}
+
+/*
+menu
+{
+    border-radius: 15px;
+    background: @orange_cream;
+}
+*/
+
 #workspaces button 
 {
     /*margin: 5px 0 0 0;*/
