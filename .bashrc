@@ -40,6 +40,7 @@ function upload_dots()
 	cp $dot_hyprland $yansujix/hypr/hyprland.conf
     cp $dot_waybar $yansujix/waybar/config.jsonc
     cp $css_waybar $yansujix/waybar/style.css
+    cp $xml_waybar $yansujix/waybar/xml/
 	cp $dot_kitty $yansujix/kitty/kitty.conf
     cp $dot_rofi $yansujix/rofi/config.rasi
     cp $dot_git $yansujix/.gitconfig
@@ -74,10 +75,16 @@ alias hyprland_config="vim $dot_hyprland"
 # ===========================
 dot_waybar=~/.config/waybar/config.jsonc
 css_waybar=~/.config/waybar/style.css
+xml_waybar=~/.config/waybar/xml
 
 alias waybar_config="vim $dot_waybar && waybar_reload"
 alias waybar_style="vim $css_waybar && waybar_reload"
 alias waybar_reload="killall waybar 2>/dev/null || true && hyprctl dispatch exec waybar"
+
+function waybar_xml()
+{
+    vim $xml_waybar/$1.xml
+}
 
 # ===========================
 # Kitty
