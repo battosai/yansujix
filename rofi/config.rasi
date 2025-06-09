@@ -1,8 +1,14 @@
 configuration 
 {
-/*	modes: "window,drun,run,ssh";*/
+	modes: "window,drun,run,filebrowser";
     font: "FiraCode 12";
 	show-icons: false;
+    display-drun: "";
+    display-run: "";
+    display-filebrowser: "";
+	display-window: "";
+	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    window-format: "{w} · {c} · {t}";
 /*	icon-theme: ;*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -27,7 +33,6 @@ configuration
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
 /*	drun-show-actions: false;*/
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -69,7 +74,6 @@ configuration
 /*	completer-mode: "filebrowser";*/
 /*	imdkit: true;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
-/*	display-window: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
 /*	display-drun: ;*/

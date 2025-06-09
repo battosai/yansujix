@@ -73,7 +73,7 @@ highlight Salmon cterm=bold ctermfg=234 ctermbg=132
 set statusline+=%#Salmon#
 set statusline+=\ %y
 highlight SalmonMuted cterm=none ctermfg=238 ctermbg=132
-set statusline+=%#SalmonMuted#
+" set statusline+=%#SalmonMuted#
 set statusline+=[%{&fileencoding?&fileencoding:&encoding}]
 set statusline+=[%{&fileformat}]\ 
 
