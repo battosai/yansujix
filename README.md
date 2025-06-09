@@ -76,3 +76,4 @@ Personal notes of my Arch Linux experience
     - Additionally, unsure if this is explicitly needed since you can specify a file path and name with just ```grim```
 - Image Viewing
   - ```xdg-open <file-path>``` is installed by default and opens files in browsers
+- TUI File Manager [yazi](https://yazi-rs.github.io/docs/installation/)
