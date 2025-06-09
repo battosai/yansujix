@@ -1,11 +1,13 @@
-configuration {
+configuration 
+{
 /*	modes: "window,drun,run,ssh";*/
-/*	font: "mono 12";*/
+    font: "FiraCode 12";
+	show-icons: false;
+/*	icon-theme: ;*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-/*	show-icons: false;*/
 /*	preview-cmd: ;*/
 /*	on-selection-changed: ;*/
 /*	on-mode-changed: ;*/
@@ -21,7 +23,6 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
@@ -35,7 +36,7 @@ configuration {
 /*	case-sensitive: false;*/
 /*	case-smart: false;*/
 /*	cycle: true;*/
-/*	sidebar-mode: false;*/
+/*	sidebar-mode: true;*/
 /*	hover-select: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
@@ -157,14 +158,119 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
+    timeout 
+    {
+        action: "kb-cancel";
+        delay:  0;
+    }
+
+    filebrowser 
+    {
+        directories-first: true;
+        sorting-method:    "name";
+    }
 }
 
-@theme "Arc-Dark"
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+// --------------------------------
+// Colors
+// --------------------------------
+* {
+    orange-cream: #FFBD8A;
+    orange: #FF6E00;
+    salmon: #C25572;
+    red: #FF0044;
+    purple: #4A233E;
+    black: #121212;
+    black-transparent: #000000DD;
+    dark-gray: #646464;
+}
+
+// --------------------------------
+// General settings
+// --------------------------------
+window
+{
+    background-color: @black-transparent;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: @purple;
+}
+
+mainbox
+{
+    // background-color: @black-transparent;
+    // border: 2px solid;
+    // border-radius: 10px;
+    // border-color: @salmon;
+}
+
+// --------------------------------
+// Search bar
+// --------------------------------
+inputbar
+{
+    text-color: @orange;
+    background-color: inherit;
+    // border: 2px solid;
+    // border-radius: 10px;
+    // border-color: @orange;
+    children: ["prompt", "textbox-prompt-colon", "entry"];
+}
+
+prompt
+{
+    enabled: false;
+}
+
+textbox-prompt-colon
+{
+    str: " :";
+    text-color: @salmon;
+}
+
+entry
+{
+    text-color: white;
+    placeholder: "Search...";
+    placeholder-color: @dark-gray;
+}
+
+// --------------------------------
+// Search results
+// --------------------------------
+listview
+{
+    border: 2px 0 0 0;
+    border-color: @purple;
+}
+
+scrollbar
+{
+    handle-width: 5px;
+    handle-color: @salmon;
+}
+
+element
+{
+    background-color: @black-transparent;
+}
+
+element normal.normal
+{
+    text-color: @orange;
+    background-color: inherit;
+}
+
+element alternate.normal
+{
+    text-color: @orange-cream;
+    background-color: inherit;
+}
+
+element selected.normal
+{
+    text-color: white;
+    background-color: @purple;
+}
