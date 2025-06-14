@@ -120,3 +120,14 @@ alias rofi_config="vim $dot_rofi"
 dot_git=~/.gitconfig
 
 alias git_config="vim $dot_git"
+
+# ===========================
+# Yazi
+# ===========================
+dot_yazi=~/.config/yazi/yazi.toml
+dot_yazi_theme=~/.config/yazi/theme.toml
+dot_yazi_keymap=~/.config/yazi/keymap.toml
+
+alias yazi_config="vim $dot_yazi"
+alias yazi_theme="vim $dot_yazi_theme"
+alias yazi_keymap="vim $dot_yazi_keymap"
