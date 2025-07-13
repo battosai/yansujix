@@ -29,6 +29,9 @@ dot_vimrc=~/.vimrc
 alias bashrc="vim $dot_bashrc && source $dot_bashrc"
 alias vimrc="vim $dot_vimrc"
 
+alias wifi_list="iwctl station wlan0 scan && iwctl station wlan0 get-networks"
+alias wifi_connect="iwctl station wlan0 connect $1"
+
 function upload_dots() 
 {
 	cd $yansujix
