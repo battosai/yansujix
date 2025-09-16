@@ -134,3 +134,20 @@ dot_yazi_keymap=~/.config/yazi/keymap.toml
 alias yazi_config="vim $dot_yazi"
 alias yazi_theme="vim $dot_yazi_theme"
 alias yazi_keymap="vim $dot_yazi_keymap"
+
+# ===========================
+# GTech
+# ===========================
+alias activate_cs6601_python_venv="cd ~/Documents/GitHub/CS6601-AI && source cs6601_ai_env/bin/activate"
+alias activate_cs6601_python_venv_a2="cd ~/Documents/GitHub/CS6601-AI/assignment2_btsai39 && source cs6601_ai_env_a2/bin/activate"
+
+function jupytext_sync()
+{
+    jupytext --set-formats ipynb,py $1.ipynb
+}
+
+function jupytext_vim()
+{
+    vim $1.py
+    jupytext --sync $1.ipynb
+}
