@@ -41,6 +41,7 @@ function upload_dots()
 	cp $dot_ssh $yansujix/.ssh/config
 	cp $dot_vimrc $yansujix/.vimrc
 	cp $dot_hyprland $yansujix/hypr/hyprland.conf
+    cp $dot_hyprlock $yansujix/hypr/hyprlock.conf
     cp $dot_waybar $yansujix/waybar/config.jsonc
     cp $css_waybar $yansujix/waybar/style.css
     cp -r $xml_waybar $yansujix/waybar/xml/
@@ -72,6 +73,13 @@ function aur_install()
 dot_hyprland=~/.config/hypr/hyprland.conf
 
 alias hyprland_config="vim $dot_hyprland"
+
+# ===========================
+# Hyprlock
+# ===========================
+dot_hyprlock=~/.config/hypr/hyprlock.conf
+
+alias hyprlock_config="vim $dot_hyprlock"
 
 # ===========================
 # Waybar
