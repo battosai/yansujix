@@ -269,8 +269,8 @@
 		"menu-file": "$HOME/.config/waybar/xml/power_menu.xml", // Menu file in resources folder
 		"menu-actions": 
         {
-			"shutdown": "shutdown",
-			"reboot": "reboot"
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot"
 			// "suspend": "systemctl suspend",
 			// "hibernate": "systemctl hibernate"
 		}
