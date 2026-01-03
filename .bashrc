@@ -72,7 +72,7 @@ function aur_install()
 # ===========================
 dot_hyprland=~/.config/hypr/hyprland.conf
 
-alias hyprland_config="vim $dot_hyprland"
+alias hyprland_config="vim $dot_hyprland && hyprctl reload"
 
 # ===========================
 # Hyprlock
