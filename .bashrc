@@ -17,6 +17,14 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 
 # ===========================
+# TTY autologin
+# ===========================
+# If on TTY1, start hyprland
+if [[ "$(tty)" == "/dev/tty1" ]]; then
+    exec start-hyprland &>/dev/null
+fi
+
+# ===========================
 # Yansujix
 # ===========================
 yansujix=~/Documents/GitHub/yansujix
